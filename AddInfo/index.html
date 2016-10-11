@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app='myapp' ng-controller= 'mycontro'>
+<head>
+	<title>This is title</title>
+
+<script type="text/javascript" src= "angular.min.js"></script>
+<script type="text/javascript" src="controller.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+
+
+<table>
+	
+<tr>
+	
+<th>No.</th>
+
+<th>Name</th>
+
+<th>Age</th>
+
+<th>Division</th>
+
+
+</tr>
+
+<tr ng-repeat="x in data">
+	
+	<td>{{ $index +1 }} </td>
+
+	<td> {{ x.name }} </td>
+
+	<td>{{ x.age}} </td>
+
+	<td> {{ x.division }}   </td>
+
+</tr>
+
+</table>
+
+<form ng-submit="addData()">
+
+Name:<input type="text" ng-model="newData.name"> 
+
+Age:<input type="number" ng-model="newData.age"> 
+
+Division:<input type="text" ng-model="newData.division"> 
+
+<input type="submit" value="Add">
+
+</form>
+
+
+
+
+</body>
+
+
+</html>
